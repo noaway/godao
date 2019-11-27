@@ -17,16 +17,16 @@ var (
 
 // PostgreSQLConfig postgresql database config
 type PostgreSQLConfig struct {
-	Host              string `yaml:"host" json:"host"`
-	Port              int    `yaml:"port" json:"port"`
-	User              string `yaml:"user" json:"user"`
-	Password          string `yaml:"password" json:"password"`
-	Database          string `yaml:"database" json:"database"`
-	SSLMode           string `yaml:"sslmode" json:"sslmode"`
-	ShowSQL           bool   `yaml:"showsql" json:"showsql"`
-	MaxIdleConnection int    `yaml:"maxidleconnection" json:"maxidleconnection"`
-	MaxOpenConnection int    `yaml:"maxopenconnection" json:"maxopenconnection"`
-	ApplicationName   string `yaml:"applicationname" json:"applicationname"`
+	Host              string `hcl:"host" yaml:"host" json:"host"`
+	Port              int    `hcl:"port" yaml:"port" json:"port"`
+	User              string `hcl:"user" yaml:"user" json:"user"`
+	Password          string `hcl:"password" yaml:"password" json:"password"`
+	Database          string `hcl:"database" yaml:"database" json:"database"`
+	SSLMode           string `hcl:"sslmode" yaml:"sslmode" json:"sslmode"`
+	ShowSQL           bool   `hcl:"showsql" yaml:"showsql" json:"showsql"`
+	MaxIdleConnection int    `hcl:"maxidleconnection" yaml:"maxidleconnection" json:"maxidleconnection"`
+	MaxOpenConnection int    `hcl:"maxopenconnection" yaml:"maxopenconnection" json:"maxopenconnection"`
+	ApplicationName   string `hcl:"applicationname" yaml:"applicationname" json:"applicationname"`
 }
 
 func (c PostgreSQLConfig) GetDriver() string {
